@@ -1,11 +1,17 @@
+import Logo from "./icons_assets/Logo.svg"
+
 const Nav = () => {
     return(
-        <ul><h1> NAV </h1>
-            <li><a href="#"> Link1 </a></li>
-            <li><a href="#"> Link2 </a></li>
-            <li><a href="#"> Link3 </a></li>
-            <li><a href="#"> Link3 </a></li>
-        </ul>
+        <div className="navbar">
+            <img src= {Logo} alt="logo"></img>
+            <ul>
+                <li><a href="#"> Home </a></li>
+                <li><a href="#"> About </a></li>
+                <li><a href="#"> Reservations </a></li>
+                <li><a href="#"> Order Online </a></li>
+                <li><a href="#"> Login </a></li>
+            </ul>
+        </div>
     )
 }
 
