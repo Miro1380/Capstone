@@ -1,8 +1,8 @@
 
-import Img1 from "./icons_assets/restauranfood.jpg"
+import Img1 from "../icons_assets/restauranfood.jpg"
+import {Link} from 'react-router-dom';
 
 const Header = () => {
-
     return (
     <div className="header">
             <div id="banner">
@@ -12,10 +12,10 @@ const Header = () => {
                     <p> We are a family owned mediterrannean restaurant,
                         focused on traditional served with a modern twist.
                     </p>
-                    <button> Reserve a table </button>
+                    <Link to="/booking"> <button>Reserve a table </button> </Link>
                 </div>
                 <div>
-                <img src= {Img1}/>
+                <img alt="" src= {Img1}/>
                 </div>
             </div>
     </div>
