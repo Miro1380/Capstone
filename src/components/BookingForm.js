@@ -1,7 +1,11 @@
 
-import {useReducer, useState} from "react";
+import {useState, useEffect} from "react";
+import { useNavigate } from "react-router-dom";
+import { fetchAPI,submitAPI } from "../timeAPI";
 
 const BookingForm = ({timeOptions,setTimeOptions}) => {
+
+    const navigate = useNavigate();
     //State vars for Date,Time, number, and occassion
     const [form,setForm] = useState({
         date:'',
@@ -11,27 +15,59 @@ const BookingForm = ({timeOptions,setTimeOptions}) => {
     });
 
     const handleChange = (e) => {
+        if(e.target.name === 'date'){
+            console.log("Value DATE: ", e.target.value)
+        }
+
         setForm(() => ({
             ...form,
             [e.target.name]:e.target.value,
         }))
     }
 
+     //API DATA
+     useEffect(() => {
+        //let date = new Date(form.date);
+        
+        //const testDate = new Date().toJSON().slice(0,10);
+        const testDate = new Date();
+        console.log("Today's DATE:" , testDate);
+        let times = fetchAPI(testDate);
+        console.log(times);
+
+        return () => {
+            for(let i=0; i < times.length; i++){
+                console.log(times.at(i))
+                console.log();
+            }
+            setTimeOptions(times);
+        };
+    }, []);
 
 
+//Check form after submit and remove selected time from available times.
 const handleSubmit = (e) => {
-    console.log("Submitted: ",form);
+    console.log("Submitted form: ",form);
     const newTimes = [];
-   timeOptions.filter((item) => {
+    timeOptions.filter((item) => {
         if(item.value !== form.availableTime){
                 newTimes.push(item);
-                //console.log("ADDING TO NEW: " + item.value)
             }
             return newTimes;
         })
         setTimeOptions(newTimes);
         console.log("Updating Times: " , newTimes);
         e.preventDefault();
+
+        for(let key in form){
+            let val = form[key];
+        }
+
+        console.log("Checking form...")
+
+        navigate("/confirmed")
+
+
 }
     return (
         <>
@@ -50,10 +86,11 @@ const handleSubmit = (e) => {
                 value={form.availableTime}
                 onChange={handleChange}
                 >
-                 {timeOptions.map(item => <option key={item.id} value ={item.value}> {item.label} </option>)}
+                 {timeOptions.map((item) => <option key={item.id} value = {item.value}> {item.label} </option>)}
                 </select>
-                <label htmlFor="guests">Number of guests</label>
+                <label htmlFor="guests" data-test-id="label">Number of guests</label>
                 <input
+                    data-test-id="increment"
                     type="number"
                     placeholder="1"
                     min="1" max="10"

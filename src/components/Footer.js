@@ -1,13 +1,14 @@
+import {Link} from "react-router-dom";
 
 const Footer = () => {
     return (
         <>
-            <ul>
-                <li><a href="#contact"> Contact info </a></li>
-                <li><a href="#social"> Link Social media</a></li>
-                <li><a href="#Doormat"> Doormat </a></li>
-                <li><a href="#Logo"> Logo </a></li>
-            </ul>
+            <footer className="footer">
+                <ul>
+                    <li><Link  to="#contact"> Contact info </Link></li>
+                    <li><Link  to="#social"> Link Social media</Link></li> 
+                </ul>
+            </footer>
         </>
     )
 }

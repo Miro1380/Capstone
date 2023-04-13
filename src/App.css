@@ -83,6 +83,10 @@
   margin-top: 3rem;
 }
 
+.mainContainer{
+  margin-bottom: 5rem;
+}
+
 .main{
   display: flex;
   height: 5rem;
@@ -126,6 +130,7 @@
   background-color:#495E57;
   justify-content: center;
   padding: 1rem;
+  margin-bottom:1
 }
 
 .form label{
@@ -144,26 +149,101 @@
   border-color: lightsteelblue;
 }
 
-/*
-
-
-
-
-
-
-#banner {
-
+.cardItems{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  padding: .25rem;
+  gap: 1rem;
+  border-radius: .25rem;
 }
 
+.card{
+  width: 150px;
+  max-width: 150px;
+}
+.card img {
+  display:flex;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  width: 9.35rem;
+  height: 7rem;
+}
 
-.main button{
-  
+.cardInfo{
+  text-align:center;
+  background-color: rgba(200, 200, 200, 0.751);
+  padding: .05rem;
+  padding-bottom: .5rem;
+  height: 200px;
+  font-size: xx-small;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cardInfo .cardItemColSize{
+  width: 120px;
+  text-align: left;
+  padding-left: 13px;
+  padding-right:13px;
+}
+
+.cardInfo .cardItemTitleAndPrice{
+  padding-top:10px;
+  display: inline-block;
+}
+
+.cardInfo .cardItemTitleAndPrice .title{
+  width:70%;
+  display: inline;
+  font-weight: bold;
+  font-size: 8px;
+}
+
+.cardInfo .cardItemTitleAndPrice .price{
+  text-align: right;
+  width:25%;
+  float:right;
+  color:red;
+}
+
+.cardInfo .cardItemDescription{
+  height:150px;
+}
+
+.cardItemButton button{
   background-color: #F4CE14;
   border-color: #F4CE14;
-  border-radius: 7px;
-  margin-left: 50%;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  border-radius: .50rem;
+  font-weight: bold;
 }
 
-*/
+.booking{
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  background-color: #495E57;
+  margin-top: 2rem;
+  width: 100%;
+  height: 4rem;
+  bottom:0px;
+}
+
+.footer li{
+  display: inline-block;
+  list-style-type: none;
+  padding: 1rem;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+}
+
+.bookingPage{
+  margin-bottom: 1rem;
+}
+
