@@ -6,7 +6,7 @@ const Footer = () => {
             <footer className="footer">
                 <ul>
                     <li><Link  to="#contact"> Contact info </Link></li>
-                    <li><Link  to="#social"> Link Social media</Link></li> 
+                    <li><Link  to="#social"> Link Social media</Link></li>
                 </ul>
             </footer>
         </>

@@ -8,7 +8,6 @@ import {useState} from "react";
 const BookingPage = () => {
     const [timeOptions,setTimeOptions] = useState([]);
 
-    
     return(
         <>
         <Nav/>
