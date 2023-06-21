@@ -130,23 +130,36 @@
   background-color:#495E57;
   justify-content: center;
   padding: 1rem;
-  margin-bottom:1
+  margin-bottom:1;
 }
 
 .form label{
   color: white;
 }
 
+.form input {
+  border: .15rem gray solid;
+ 
+}
+
+.form option{
+  
+}
+
 #frm-bttn{
   background-color: #F4CE14;
   border-color: #F4CE14;
-  border-radius: .50rem;
+  border-radius: 4px;
   font-weight: bold;
 }
 
 #frm-bttn:hover{
   background-color: lightsteelblue;
   border-color: lightsteelblue;
+}
+
+.button:disabled{
+  opacity: .35;
 }
 
 .cardItems{
@@ -246,8 +259,18 @@
 .bookingPage{
   margin-bottom: 1rem;
 }
+input.input-error,
+select.input-error{
+  border-radius: 2px;
+  border-color: red;
+}
 
+.error{
+  color: crimson;
+  font-size: x-small;
+  font-style: italic;
 
+}
 
 
 

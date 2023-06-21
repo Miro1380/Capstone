@@ -27,11 +27,8 @@ const BookingForm = ({timeOptions,setTimeOptions}) => {
     const handleBlur = (e) => {
         let field = e.target.name;
         let value = e.target.value;
-        // //console.log("In blur - e: " + e.target.name)
-        // console.log("Field: "+ field);
-        // console.log("Value: "+ value);
+
         if(value !== ""){
-            //console.log("In IF ")
             setValidForm({...validForm,[field]:true});
         }
         console.log("Current State: ", validForm);
@@ -80,7 +77,7 @@ const handleSubmit = (e) => {
             }
         return newTimes
         })
-        setTimeOptions(newTimes);
+    setTimeOptions(newTimes);
 
         //Check the fields are not null,empty or undefined
         for(let key in form){
