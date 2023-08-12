@@ -1,5 +1,4 @@
 import Nav from "../components/Nav";
-//import BookingForm from "../components/BookingForm";
 import FormikForm from "../components/FormikForm";
 import Footer from "../components/Footer";
 import {useState} from "react";
